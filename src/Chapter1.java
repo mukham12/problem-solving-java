@@ -1,4 +1,5 @@
 import javax.swing.JOptionPane;
+import java.util.Scanner;
 
 public class Chapter1 {
 	public static void main(String[] args) {
@@ -18,5 +19,19 @@ public class Chapter1 {
 		 */
 		String input = JOptionPane.showInputDialog("Enter a whole number: ");
 		JOptionPane.showMessageDialog(null, input);
+
+		// Practice Problems
+		/*
+		1. Write a program that reads Principal, Rate and Time from the user. The program then calculates
+		   and displays the Simple Interest and the Amount.
+		 */
+		Scanner keyboard = new Scanner(System.in);
+		System.out.println("Please enter the Principal: ");
+		double P = keyboard.nextDouble();
+		System.out.println("Please enter the Rate: ");
+		double R = keyboard.nextDouble();
+		System.out.println("Please enter the Time: ");
+		double T = keyboard.nextDouble();
+		System.out.println("Your Simple Interest would be " + (P * R * T) / 100 + " and Amount is " + P + (P * R * T) / 100);
 	}
 }
