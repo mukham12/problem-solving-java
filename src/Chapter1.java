@@ -21,17 +21,34 @@ public class Chapter1 {
 		JOptionPane.showMessageDialog(null, input);
 
 		// Practice Problems
+
 		/*
-		1. Write a program that reads Principal, Rate and Time from the user. The program then calculates
-		   and displays the Simple Interest and the Amount.
+			1. Write a program that reads Principal, Rate and Time from the user. The program then calculates
+		       and displays the Simple Interest and the Amount.
 		 */
 		Scanner keyboard = new Scanner(System.in);
-		System.out.println("Please enter the Principal: ");
+		System.out.print("Please enter the Principal: ");
 		double P = keyboard.nextDouble();
-		System.out.println("Please enter the Rate: ");
+		System.out.print("Please enter the Rate: ");
 		double R = keyboard.nextDouble();
-		System.out.println("Please enter the Time: ");
+		System.out.print("Please enter the Time: ");
 		double T = keyboard.nextDouble();
 		System.out.println("Your Simple Interest would be " + (P * R * T) / 100 + " and Amount is " + P + (P * R * T) / 100);
+
+		/*
+			2. Write a program that uses Scanner to read two strings from the keyboard. Display each string, along with
+			its length, on two separate lines. Then create a new string by joining the two strings, separated by a blank.
+			Display the new string and its length on a third line.
+		 */
+		System.out.print("Enter first string: ");
+		String first = keyboard.next();
+		System.out.print("Enter second string: ");
+		String second = keyboard.next();
+
+		System.out.println("First string is '" + first + "' and its length is " + first.length());
+		System.out.println("Second string is'" + second + "' and its length is " + second.length());
+
+		String combined = first + " " + second;
+		System.out.println("Joined string is '" + combined + "' and its length is " + combined.length());
 	}
 }
