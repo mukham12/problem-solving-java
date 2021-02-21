@@ -2,6 +2,8 @@ import javax.swing.JOptionPane;
 import java.util.Scanner;
 
 public class Chapter1 {
+	public static final double INTEREST_RATE = 7.49 / 12;
+
 	public static void main(String[] args) {
 		/*
 		Chapter 1, Self-Test Question #39
@@ -50,5 +52,28 @@ public class Chapter1 {
 
 		String combined = first + " " + second;
 		System.out.println("Joined string is '" + combined + "' and its length is " + combined.length());
+
+		/*
+			3 . Write a program that reads the amount of a monthly mortgage payment and the amount still owed the
+				outstanding balance—and then displays the amount of the payment that goes to interest and the amount
+				that goes to principal (i.e., the amount that goes to reducing the debt). Assume that the annual
+				interest  rate  is  7.49  percent. Use a named constant for the interest rate. Note that payments are
+				made monthly, so the interest is only one twelfth of the annual interest of 7.49 percent.
+		 */
+		double monthlyPayment = 1000000 / 12;
+		double monthlyInterestTotal = monthlyPayment * (INTEREST_RATE / 100) * 12;
+		double monthlyPaymentInterestTotal = monthlyPayment + monthlyPayment * (INTEREST_RATE / 100);
+		double principalAmount = 1000000 + monthlyInterestTotal;
+
+		double roundMonthlyPaymentInterestTotal = (double) Math.round(monthlyPaymentInterestTotal * 100) / 100d;
+		double roundInterestAmount = (double) Math.round(monthlyPayment * (INTEREST_RATE / 100) * 100) / 100d;
+		double roundMonthlyInterestTotal = (double) Math.round(monthlyInterestTotal * 100) / 100d;
+		double roundPrincipalAmount = (double) Math.round(principalAmount * 100) / 100d;
+
+		System.out.println("\nThe monthly payment will be: R " + roundMonthlyPaymentInterestTotal);
+		System.out.println("The monthly interest payment will be: " + roundInterestAmount);
+		System.out.println("Total interest paid: R " + roundMonthlyInterestTotal);
+		System.out.println("Your total back payment will be: R " + roundPrincipalAmount);
+
 	}
 }
