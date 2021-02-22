@@ -75,5 +75,22 @@ public class Chapter1 {
 		System.out.println("Total interest paid: R " + roundMonthlyInterestTotal);
 		System.out.println("Your total back payment will be: R " + roundPrincipalAmount);
 
+		/*
+			4. Write a program that reads a four-digit integer, such as 2014, and then display it, one digit per line
+			in reverse order, like so:
+			4
+			1
+			0
+			2
+		 */
+		System.out.print("Enter a 4-digit number: ");
+		int number = keyboard.nextInt();
+		System.out.println(number % 10);
+		number /= 10;
+		System.out.println(number % 10);
+		number /= 10;
+		System.out.println(number % 10);
+		number /= 10;
+		System.out.println(number);
 	}
 }
