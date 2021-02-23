@@ -92,5 +92,12 @@ public class Chapter1 {
 		System.out.println(number % 10);
 		number /= 10;
 		System.out.println(number);
+
+
+		// 5. Repeat the previous project, but read the input in string and display the alternate characters from last.
+		System.out.print("Enter a 4-digit number: ");
+		String stringNumber = keyboard.next();
+		System.out.println(stringNumber.charAt(3));
+		System.out.println(stringNumber.charAt(1));
 	}
 }
