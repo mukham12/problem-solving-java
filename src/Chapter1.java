@@ -99,5 +99,17 @@ public class Chapter1 {
 		String stringNumber = keyboard.next();
 		System.out.println(stringNumber.charAt(3));
 		System.out.println(stringNumber.charAt(1));
+
+		// Practice Projects
+
+		/*
+			1. Write a program that converts degrees from Fahrenheit to Celsius, using the formula
+			DegreesC = 5(DegreesF - 32) / 9
+		 */
+		System.out.print("Enter a temperature in degrees Fahrenheit: ");
+		int fahrenheit = keyboard.nextInt();
+		float celsius = 5 * (fahrenheit - 32) / 9f;
+		System.out.printf("%d degrees Fahrenheit is %.1f degrees Celsius.", fahrenheit, celsius);
+		
 	}
 }
