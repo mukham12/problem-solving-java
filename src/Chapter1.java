@@ -109,7 +109,20 @@ public class Chapter1 {
 		System.out.print("Enter a temperature in degrees Fahrenheit: ");
 		int fahrenheit = keyboard.nextInt();
 		float celsius = 5 * (fahrenheit - 32) / 9f;
-		System.out.printf("%d degrees Fahrenheit is %.1f degrees Celsius.", fahrenheit, celsius);
-		
+		System.out.printf("%d degrees Fahrenheit is %.1f degrees Celsius.\n\n", fahrenheit, celsius);
+
+		/*
+			2. Write a program that reads a line of text and then displays the line, but with the first occurrence of
+			"hate" changed to love. For example, a possible sample dialogue might be
+			Enter a line of text.
+			I hate you.
+			I have rephrased that line to read:
+			I love you.
+		 */
+		// Code below is required to consume the new-line before cursor can be moved down to the needed line.
+		keyboard.nextLine();
+		System.out.println("Enter a line of text.");
+		String text = keyboard.nextLine();
+		System.out.println("I have rephrased that line to read:\n" + text.replaceFirst("hate", "love"));
 	}
 }
