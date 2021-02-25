@@ -140,5 +140,23 @@ public class Chapter1 {
 		String firstWord = sentence.substring(0, sentence.indexOf(" "));
 		sentence = sentence.replaceFirst(firstWord, "") + " " + firstWord;
 		System.out.println("I have rephrased that line to read:\n" + sentence);
+
+		/*
+			4. Write a program that asks the user to enter a favorite color, a favorite food, a favorite animal, and the
+			first name of a friend or relative. The program should then print the following two lines, with the user’s
+			input replacing the items in quotes:
+
+			I had a dream that "Name" ate a Color "Animal" and said it tasted like "Food"!
+		 */
+		System.out.print("Enter a name: ");
+		String name = keyboard.next();
+		System.out.print("Enter a color: ");
+		String color = keyboard.next();
+		System.out.print("Enter an animal: ");
+		String animal = keyboard.next();
+		System.out.print("Enter a food: ");
+		String food = keyboard.next();
+
+		System.out.printf("I had a dream that %s ate a %s %s and said it tasted like %s!", name, color, animal, food);
 	}
 }
