@@ -124,5 +124,21 @@ public class Chapter1 {
 		System.out.println("Enter a line of text.");
 		String text = keyboard.nextLine();
 		System.out.println("I have rephrased that line to read:\n" + text.replaceFirst("hate", "love"));
+
+		/*
+			3. Write a program that will read a line of text as input and then display the line with the first word
+			moved to the end of the line. For example, a possible sample interaction with the user might be
+
+			Enter a line of text. No punctuation please.
+			Java is the language
+			I have rephrased that line to read
+			Is the language Java
+
+		 */
+		System.out.println("Enter a line of text. No punctuation please.");
+		String sentence = keyboard.nextLine();
+		String firstWord = sentence.substring(0, sentence.indexOf(" "));
+		sentence = sentence.replaceFirst(firstWord, "") + " " + firstWord;
+		System.out.println("I have rephrased that line to read:\n" + sentence);
 	}
 }
