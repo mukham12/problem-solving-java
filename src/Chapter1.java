@@ -157,6 +157,32 @@ public class Chapter1 {
 		System.out.print("Enter a food: ");
 		String food = keyboard.next();
 
-		System.out.printf("I had a dream that %s ate a %s %s and said it tasted like %s!", name, color, animal, food);
+		System.out.printf("I had a dream that %s ate a %s %s and said it tasted like %s!\n", name, color, animal, food);
+
+		/*
+			5. Write a program that determines the change to be dispensed from a vending machine. An item in the can cost
+			between 25 cents and a dollar, in 5-cent increments (25, 30, 35, ..., 90, 95, 100), and the machine accepts
+			only a single dollar bill to pay for the item. For example, a possible dialogue with the use might be
+			Enter price of item (from 25 cents to a dollar, in 5-cent increments): 45
+
+			You bought an iterm for 45 cents and gave me a dollar, so your change is
+			2 quarters,
+			0 dimes, and
+			1 nickel.
+		 */
+		System.out.print("Enter price of item (from 25 cents to a dollar, in 5-cent increments): ");
+		int price = keyboard.nextInt();
+		int change = 100 - price;
+
+		int quarter =  change / 25;
+		change %= 25;
+
+		int dime = change / 10;
+		change %= 10;
+
+		int nickel = change / 5;
+
+		System.out.printf("You bought an item for %d cents and gave me a dollar, so your change is" +
+						  "\n%d quarters\n%d dimes, and \n%d nickel.", price, quarter, dime, nickel);
 	}
 }
