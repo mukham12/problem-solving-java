@@ -183,6 +183,21 @@ public class Chapter1 {
 		int nickel = change / 5;
 
 		System.out.printf("You bought an item for %d cents and gave me a dollar, so your change is" +
-						  "\n%d quarters\n%d dimes, and \n%d nickel.", price, quarter, dime, nickel);
+						  "\n%d quarters\n%d dimes, and \n%d nickel.\n", price, quarter, dime, nickel);
+
+		/*
+			6. Write a program that reads a 4-bit binary number from the keyboard as a string and then converts it into
+			decimal. For example, if the input is 1100, the output should be 12.
+		 */
+		System.out.print("Enter 4-bit binary number: ");
+		String binary = keyboard.next();
+		int one = Integer.parseInt(binary.substring(0, 1));
+		int two = Integer.parseInt(binary.substring(1, 2));
+		int three = Integer.parseInt(binary.substring(2, 3));
+		int four = Integer.parseInt(binary.substring(3, 4));
+
+		int decimal = 8 * one + 4 * two + 2 * three + four;
+		System.out.println(binary + " in binary is " + decimal + " in decimal.");
+
 	}
 }
