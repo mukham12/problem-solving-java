@@ -70,10 +70,10 @@ public class Chapter1 {
 		double roundMonthlyInterestTotal = (double) Math.round(monthlyInterestTotal * 100) / 100d;
 		double roundPrincipalAmount = (double) Math.round(principalAmount * 100) / 100d;
 
-		System.out.println("\nThe monthly payment will be: R " + roundMonthlyPaymentInterestTotal);
+		System.out.println("\nThe monthly payment will be: " + roundMonthlyPaymentInterestTotal);
 		System.out.println("The monthly interest payment will be: " + roundInterestAmount);
-		System.out.println("Total interest paid: R " + roundMonthlyInterestTotal);
-		System.out.println("Your total back payment will be: R " + roundPrincipalAmount);
+		System.out.println("Total interest paid: " + roundMonthlyInterestTotal);
+		System.out.println("Your total back payment will be: " + roundPrincipalAmount);
 
 		/*
 			4. Write a program that reads a four-digit integer, such as 2014, and then display it, one digit per line
@@ -121,5 +121,19 @@ public class Chapter1 {
 
 		System.out.println("To maintain your BMR you will need to eat\n" + (int) (femaleBMR / 230) + " chocolate bars if" +
 				" you are a female\nor\n" + (int) (maleBMR / 230) + " chocolate bars if you are a male!");
+
+		// Skipping Practice Project #9 because it asks for exactly the same thing but using JOptionPane
+		/*
+			10. Write a program that reads a string for a date in the format month/day/year and displays it in the
+			format day . month . year,  which is a typical format used in Europe. For example, if the input is 06 /17/11,
+			the output should be 17.06.11.Your program should use JOptionPane for input and output.
+		 */
+		String monthDayYear = JOptionPane.showInputDialog("Enter date as month/day/year");
+		String month = monthDayYear.substring(0, 2);
+		String day = monthDayYear.substring(3, 5);
+		String year = monthDayYear.substring(6, 10);
+
+		JOptionPane.showMessageDialog(null,
+				"American format: " + monthDayYear + "\nEuropean format: " + day + "." + month + "." + year);
 	}
 }
