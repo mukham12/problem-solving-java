@@ -29,5 +29,26 @@ public class Chapter2 {
 		} else {
 			System.out.println("This is impossible!");
 		}
+
+		/*
+			2. Write a program to read in three nonnegative integers from the keyboard. Display the integers in increasing order.
+
+		 */
+		System.out.print("Enter first positive integer: ");
+		int first = keyboard.nextInt();
+		System.out.print("Enter second positive integer: ");
+		int second = keyboard.nextInt();
+		System.out.print("Enter third positive integer: ");
+		int third = keyboard.nextInt();
+		System.out.print(first + ", " + second + ", and " + third + " in increasing order: ");
+		if (first > second) {
+
+		}
+		if (second > first && second > third) {
+			System.out.println(second);
+		}
+		if (third > first && third > second) {
+			System.out.println();
+		}
 	}
 }
