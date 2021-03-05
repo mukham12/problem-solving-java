@@ -41,14 +41,26 @@ public class Chapter2 {
 		System.out.print("Enter third positive integer: ");
 		int third = keyboard.nextInt();
 		System.out.print(first + ", " + second + ", and " + third + " in increasing order: ");
-		if (first > second) {
-
-		}
-		if (second > first && second > third) {
-			System.out.println(second);
-		}
-		if (third > first && third > second) {
-			System.out.println();
+		if (first < second) {
+			if (second < third) {
+				System.out.println(first + " " + second + " " + third);
+			} else {
+				if (first < third) {
+					System.out.println(first + " " + third + " " + second);
+				} else {
+					System.out.println(third + " " + second + " " + first);
+				}
+			}
+		} else {
+			if (third < second) {
+				System.out.println(third + " " + second + " " + first);
+			} else {
+				if (third < first) {
+					System.out.println(second + " " + third + " " + first);
+				} else {
+					System.out.println(second + " " + first + " " + third);
+				}
+			}
 		}
 	}
 }
