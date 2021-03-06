@@ -32,7 +32,6 @@ public class Chapter2 {
 
 		/*
 			2. Write a program to read in three nonnegative integers from the keyboard. Display the integers in increasing order.
-
 		 */
 		System.out.print("Enter first positive integer: ");
 		int first = keyboard.nextInt();
@@ -61,6 +60,27 @@ public class Chapter2 {
 					System.out.println(second + " " + first + " " + third);
 				}
 			}
+		}
+
+		/*
+			3. Write a program that reads three strings from the keyboard. Although the strings are in no particular
+			order, display the string that would be second if they were arranged lexicographically
+		 */
+		keyboard.nextLine();
+		System.out.print("Enter first string: ");
+		String s1 = keyboard.nextLine();
+		System.out.print("Enter second string: ");
+		String s2 = keyboard.nextLine();
+		System.out.print("Enter third string: ");
+		String s3 = keyboard.nextLine();
+
+		System.out.print("Second string from the lexicographic order is '");
+		if (s1.compareTo(s2) > 0 && s1.compareTo(s3) < 0 || s1.compareTo(s2) < 0 && s1.compareTo(s3) > 0) {
+			System.out.print(s1 + "'");
+		} else if (s1.compareTo(s2) < 0 && s2.compareTo(s3) < 0 || s1.compareTo(s2) > 0 && s2.compareTo(s3) > 0) {
+			System.out.print(s2 + "'");
+		} else {
+			System.out.print(s3 + "'");
 		}
 	}
 }
