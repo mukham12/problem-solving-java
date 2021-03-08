@@ -63,45 +63,22 @@ public class Chapter2 {
 		}
 
 		/*
-			3. Write a program that reads three strings from the keyboard. Although the strings are in no particular
-			order, display the string that would be second if they were arranged lexicographically
+			5. Write a program that allows the user to convert a temperature given in degrees from either Celsius to
+			Fahrenheit or Fahrenheit to Celsius. Prompt the user to enter a temperature and either a C or c for Celsius
+			or an F or f for Fahrenheit. Convert the temperature to Fahrenheit if Celsius is entered,  or  to  Celsius
+			if  Fahrenheit  is  entered.
 		 */
-		keyboard.nextLine();
-		System.out.print("Enter first string: ");
-		String s1 = keyboard.nextLine();
-		System.out.print("Enter second string: ");
-		String s2 = keyboard.nextLine();
-		System.out.print("Enter third string: ");
-		String s3 = keyboard.nextLine();
-
-		System.out.print("Second string from the lexicographic order is '");
-		if (s1.compareTo(s2) > 0 && s1.compareTo(s3) < 0 || s1.compareTo(s2) < 0 && s1.compareTo(s3) > 0) {
-			System.out.print(s1 + "'");
-		} else if (s1.compareTo(s2) < 0 && s2.compareTo(s3) < 0 || s1.compareTo(s2) > 0 && s2.compareTo(s3) > 0) {
-			System.out.print(s2 + "'");
+		System.out.print("Enter temperature: ");
+		int temperature = keyboard.nextInt();
+		System.out.print("Enter C for Celsius or F for Fahrenheit: ");
+		String label = keyboard.next();
+		if (label.equals("C") || label.equals("c")) {
+			System.out.println(temperature + "C is " + (9 * (temperature / 5) + 32) + "F");
+		} else if (label.equals("F") || label.equals("f")) {
+			System.out.println(temperature + "F is " + (5 * (temperature - 32) / 9) + "C");
 		} else {
-			System.out.print(s3 + "'");
-		}
-
-		/*
-			4. Write a program that reads a one-line sentence as input and then displays the following response: If the
-			sentence ends with a question mark (?) and the input contains an even number of characters, display the word
-			Yes. If the sentence ends with a question mark and the input contains an odd number of characters, display
-			the word No. If the sentence ends with an exclamation point (!), display the word Wow. In all other cases,
-			display the words You always say followed  by  the  input  string  enclosed  in  quotes.
-		 */
-		System.out.println("Enter a sentence: ");
-		String sentence = keyboard.nextLine();
-		if (sentence.charAt(sentence.length() - 1) == '?') {
-			if (sentence.length() % 2 == 0) {
-				System.out.println("Yes");
-			} else {
-				System.out.println("No");
-			}
-		} else if (sentence.charAt(sentence.length() - 1) == '!'){
-			System.out.println("Wow");
-		} else {
-			System.out.println("You always say \"" + sentence + "\"");
+			System.out.println("YOU ENTERED INVALID TEMPERATURE");
+			System.exit(1);
 		}
 	}
 }
