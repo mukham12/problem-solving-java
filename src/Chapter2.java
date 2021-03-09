@@ -80,5 +80,13 @@ public class Chapter2 {
 			System.out.println("YOU ENTERED INVALID TEMPERATURE");
 			System.exit(1);
 		}
+
+		System.out.print("Enter a floating-point value: ");
+		double value = keyboard.nextDouble();
+		if (value > 150.45 || (value >= 60.30 && value <= 70.25)) {
+			System.out.println("YES");
+		} else {
+			System.out.println("NO");
+		}
 	}
 }
