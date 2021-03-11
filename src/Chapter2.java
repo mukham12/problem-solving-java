@@ -88,5 +88,12 @@ public class Chapter2 {
 		} else {
 			System.out.println("NO");
 		}
+
+		/*
+			7. Write a program that calculates the blood alcohol content of someone drinking Jagerbombs. Assume that
+			there are 0.55 ounces of alcohol in one Jagerbomb. BAC = (4.136 * numDrink * ouncesAlcohol) / (weight).
+			Pick numbers of your own choosing.
+		 */
+		System.out.println("Drinking 4 shots of Jagerbomb would result in " + (4.136 * 4 * 0.55) / (150) + " BAC");
 	}
 }
