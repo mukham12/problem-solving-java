@@ -116,6 +116,34 @@ public class Chapter2 {
 			the data and a message that indicates whether it is valid. If it is not valid, also display a message saying
 			why it is not valid.
 		 */
+		System.out.print("Enter the month: ");
+		int month = keyboard.nextInt();
 
+		if (month <= 0 || month > 12) {
+			System.out.println("WRONG MONTH ENTERED!");
+			System.exit(1);
+		}
+
+		System.out.print("Enter the day: ");
+		int day = keyboard.nextInt();
+
+		if (day <= 0 || day > 31) {
+			System.out.println("WRONG DAY ENTERED!");
+			System.exit(1);
+		} else if (month == 4 || month == 6 || month == 9 || month == 11 && day > 30) {
+			System.out.println("Invalid day because " + month + " month has only 30 days");
+			System.exit (1);
+		}
+
+		System.out.print("Enter the year: ");
+		int year = keyboard.nextInt();
+
+		boolean leap = ((year % 4 == 0) && (year % 100 != 0) || (year % 400 == 0));
+		if (leap && month == 2 && day >= 29) {
+			System.out.println("Invalid year because " + year + " is not a leap year!");
+			System.exit(1);
+		} else {
+			System.out.println("Date entered is valid and it is: " + month + "/" + day + "/" + year);
+		}
 	}
 }
