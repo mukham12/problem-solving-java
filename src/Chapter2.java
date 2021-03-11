@@ -95,5 +95,21 @@ public class Chapter2 {
 			Pick numbers of your own choosing.
 		 */
 		System.out.println("Drinking 4 shots of Jagerbomb would result in " + (4.136 * 4 * 0.55) / (150) + " BAC");
+
+
+		/*
+			Programming Projects
+			3. Write a program that reads a string from the keyboard and tests whether the string contains one of our
+			profane words (dog, cat, llama).
+		 */
+
+		System.out.println("Enter a text: ");
+		String text = keyboard.nextLine();
+		if (text.equalsIgnoreCase("dog") || text.equalsIgnoreCase("cat") || text.equalsIgnoreCase("llama")) {
+			System.out.println("The text you entered has a profanity.");
+		} else {
+			System.out.println("The text you entered does not have a profanity.");
+		}
+
 	}
 }
