@@ -160,8 +160,16 @@ public class Chapter2 {
 			System.out.println("Nobody wins");
 		} else if (p1.equalsIgnoreCase("p") && p2.equalsIgnoreCase("r")) {
 			System.out.println("Player 1 wins because paper covers rock");
-		} else if () {
-
+		} else if (p2.equalsIgnoreCase("p") && p1.equalsIgnoreCase("r")) {
+			System.out.println("Player 2 wins because paper covers rock");
+		} else if (p1.equalsIgnoreCase("r") && p2.equalsIgnoreCase("s")) {
+			System.out.println("Player 1 wins because rock breaks scissors");
+		} else if (p2.equalsIgnoreCase("r") && p1.equalsIgnoreCase("s")) {
+			System.out.println("Player 2 wins because rock breaks scissors");
+		} else if (p1.equalsIgnoreCase("s") && p2.equalsIgnoreCase("p")) {
+			System.out.println("Player 1 wins because scissors cuts paper");
+		} else if (p2.equalsIgnoreCase("s") && p1.equalsIgnoreCase("p")) {
+			System.out.println("Player 2 wins because scissors cuts paper");
 		}
 	}
 }
