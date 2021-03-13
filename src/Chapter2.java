@@ -145,5 +145,23 @@ public class Chapter2 {
 		} else {
 			System.out.println("Date entered is valid and it is: " + month + "/" + day + "/" + year);
 		}
+
+		/*
+			8. Write a program to play the rock-paper-scissor game. Each of two users types in either P, R, or S. The
+			program then announces the winner as well as the the basis for determining the winner: paper covers rock,
+			rock breaks scissors, scissors cuts paper, or nobody wins. Accept both uppercase or lowercase letters.
+		 */
+		System.out.print("Enter option for Player 1 (P, R, S): ");
+		String p1 = keyboard.next();
+		System.out.print("Enter option for Player 2 (P, R, S): ");
+		String p2 = keyboard.next();
+
+		if (p1.equalsIgnoreCase(p2)) {
+			System.out.println("Nobody wins");
+		} else if (p1.equalsIgnoreCase("p") && p2.equalsIgnoreCase("r")) {
+			System.out.println("Player 1 wins because paper covers rock");
+		} else if () {
+
+		}
 	}
 }
